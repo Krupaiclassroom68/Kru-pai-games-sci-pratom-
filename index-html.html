@@ -1,0 +1,503 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ข้อสอบเรื่องเสียง ป.5-6 (เฉลยทันที)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f0f8ff, #e6f7ff);
+            color: #333;
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #1e90ff;
+            font-size: 2.5em;
+        }
+        .question {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 2px solid #ffd700;
+            border-radius: 12px;
+            background-color: #ffffff;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        }
+        .options label {
+            display: block;
+            margin-bottom: 5px;
+            cursor: pointer;
+            background: #f9f9f9;
+            padding: 8px;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+        .options label:hover {
+            background: #e0f7fa;
+        }
+        button {
+            display: block;
+            margin: 30px auto;
+            padding: 12px 25px;
+            font-size: 18px;
+            background-color: #ffd700;
+            color: #000;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #ffc107;
+        }
+        #result {
+            text-align: center;
+            font-size: 24px;
+            margin-top: 30px;
+            color: #1e90ff;
+            font-weight: bold;
+        }
+        .correct {
+            color: green;
+            font-weight: bold;
+        }
+        .wrong {
+            color: red;
+            font-weight: bold;
+        }
+        .logo {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            color: #ff9800;
+            margin-bottom: 15px;
+        }
+        .big-score {
+            font-size: 3em;
+            color: #e91e63;
+        }
+        .emoji {
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎵 ข้อสอบเรื่องเสียง ป.5-6 🎵</h1>
+    <p class="logo">🌟 Kru Pai Classroom 🌟</p>
+    <form id="quizForm">
+
+    <div class="question">
+        <p><b>1. เสียงเกิดจากอะไร?</b></p>
+        <div class="options">
+            <label><input type="radio" name="q1" value="A" onclick="giveFeedback(1, 'A')"> ก) การสั่นสะเทือน</label>
+            <label><input type="radio" name="q1" value="B" onclick="giveFeedback(1, 'B')"> ข) การไหลของอากาศ</label>
+            <label><input type="radio" name="q1" value="C" onclick="giveFeedback(1, 'C')"> ค) การเคลื่อนที่ของแสง</label>
+            <label><input type="radio" name="q1" value="D" onclick="giveFeedback(1, 'D')"> ง) การหมุนของวัตถุ</label>
+        </div>
+        <p id="feedback1"></p>
+    </div>
+    
+    <div class="question">
+        <p><b>2. ตัวกลางใดที่เสียงเดินทางได้เร็วที่สุด?</b></p>
+        <div class="options">
+            <label><input type="radio" name="q2" value="A" onclick="giveFeedback(2, 'A')"> ก) อากาศ</label>
+            <label><input type="radio" name="q2" value="B" onclick="giveFeedback(2, 'B')"> ข) น้ำ</label>
+            <label><input type="radio" name="q2" value="C" onclick="giveFeedback(2, 'C')"> ค) เหล็ก</label>
+            <label><input type="radio" name="q2" value="D" onclick="giveFeedback(2, 'D')"> ง) สุญญากาศ</label>
+        </div>
+        <p id="feedback2"></p>
+    </div>
+    
+    <div class="question">
+        <p><b>3. เสียงไม่สามารถเดินทางผ่านสิ่งใด?</b></p>
+        <div class="options">
+            <label><input type="radio" name="q3" value="A" onclick="giveFeedback(3, 'A')"> ก) อากาศ</label>
+            <label><input type="radio" name="q3" value="B" onclick="giveFeedback(3, 'B')"> ข) สุญญากาศ</label>
+            <label><input type="radio" name="q3" value="C" onclick="giveFeedback(3, 'C')"> ค) น้ำ</label>
+            <label><input type="radio" name="q3" value="D" onclick="giveFeedback(3, 'D')"> ง) เหล็ก</label>
+        </div>
+        <p id="feedback3"></p>
+    </div>
+    
+    <div class="question">
+        <p><b>4. ความถี่สูงให้เสียงลักษณะใด?</b></p>
+        <div class="options">
+            <label><input type="radio" name="q4" value="A" onclick="giveFeedback(4, 'A')"> ก) เบา</label>
+            <label><input type="radio" name="q4" value="B" onclick="giveFeedback(4, 'B')"> ข) ดัง</label>
+            <label><input type="radio" name="q4" value="C" onclick="giveFeedback(4, 'C')"> ค) แหลม</label>
+            <label><input type="radio" name="q4" value="D" onclick="giveFeedback(4, 'D')"> ง) ทุ้ม</label>
+        </div>
+        <p id="feedback4"></p>
+    </div>
+    
+    <div class="question">
+        <p><b>5. ส่วนใดของหูที่สั่นตามคลื่นเสียง?</b></p>
+        <div class="options">
+            <label><input type="radio" name="q5" value="A" onclick="giveFeedback(5, 'A')"> ก) ค้อน</label>
+            <label><input type="radio" name="q5" value="B" onclick="giveFeedback(5, 'B')"> ข) กลองหู</label>
+            <label><input type="radio" name="q5" value="C" onclick="giveFeedback(5, 'C')"> ค) ท่อยูสเตเชียน</label>
+            <label><input type="radio" name="q5" value="D" onclick="giveFeedback(5, 'D')"> ง) หอยโข่ง</label>
+        </div>
+        <p id="feedback5"></p>
+    </div>
+    
+    <div class="question">
+        <p><b>6. หน่วยของความถี่เสียงคืออะไร?</b></p>
+        <div class="options">
+            <label><input type="radio" name="q6" value="A" onclick="giveFeedback(6, 'A')"> ก) เดซิเบล</label>
+            <label><input type="radio" name="q6" value="B" onclick="giveFeedback(6, 'B')"> ข) เฮิรตซ์</label>
+            <label><input type="radio" name="q6" value="C" onclick="giveFeedback(6, 'C')"> ค) วัตต์</label>
+            <label><input type="radio" name="q6" value="D" onclick="giveFeedback(6, 'D')"> ง) นิวตัน</label>
+        </div>
+        <p id="feedback6"></p>
+    </div>
+    
+    <div class="question">
+        <p><b>7. เสียงที่มีความถี่มากกว่า 20,000 Hz เรียกว่าอะไร?</b></p>
+        <div class="options">
+            <label><input type="radio" name="q7" value="A" onclick="giveFeedback(7, 'A')"> ก) อินฟราโซนิก</label>
+            <label><input type="radio" name="q7" value="B" onclick="giveFeedback(7, 'B')"> ข) อัลตราโซนิก</label>
+            <label><input type="radio" name="q7" value="C" onclick="giveFeedback(7, 'C')"> ค) ลาวด์ซาวด์</label>
+            <label><input type="radio" name="q7" value="D" onclick="giveFeedback(7, 'D')"> ง) ซอฟต์ซาวด์</label>
+        </div>
+        <p id="feedback7"></p>
+    </div>
+    
+    <div class="question">
+        <p><b>8. อวัยวะส่วนใดของหูที่ทำหน้าที่แปลงคลื่นเสียงเป็นสัญญาณประสาท?</b></p>
+        <div class="options">
+            <label><input type="radio" name="q8" value="A" onclick="giveFeedback(8, 'A')"> ก) กลองหู</label>
+            <label><input type="radio" name="q8" value="B" onclick="giveFeedback(8, 'B')"> ข) ค้อน</label>
+            <label><input type="radio" name="q8" value="C" onclick="giveFeedback(8, 'C')"> ค) ทั่ง</label>
+            <label><input type="radio" name="q8" value="D" onclick="giveFeedback(8, 'D')"> ง) หอยโข่ง</label>
+        </div>
+        <p id="feedback8"></p>
+    </div>
+    
+    <div class="question">
+        <p><b>9. มลพิษทางเสียงคืออะไร?</b></p>
+        <div class="options">
+            <label><input type="radio" name="q9" value="A" onclick="giveFeedback(9, 'A')"> ก) เสียงที่น่ารำคาญและเป็นอันตราย</label>
+            <label><input type="radio" name="q9" value="B" onclick="giveFeedback(9, 'B')"> ข) เสียงที่ไพเราะ</label>
+            <label><input type="radio" name="q9" value="C" onclick="giveFeedback(9, 'C')"> ค) เสียงที่ดังในคอนเสิร์ต</label>
+            <label><input type="radio" name="q9" value="D" onclick="giveFeedback(9, 'D')"> ง) เสียงของธรรมชาติ</label>
+        </div>
+        <p id="feedback9"></p>
+    </div>
+    
+    <div class="question">
+        <p><b>10. ความเร็วเสียงในอากาศประมาณกี่ m/s?</b></p>
+        <div class="options">
+            <label><input type="radio" name="q10" value="A" onclick="giveFeedback(10, 'A')"> ก) 150 m/s</label>
+            <label><input type="radio" name="q10" value="B" onclick="giveFeedback(10, 'B')"> ข) 340 m/s</label>
+            <label><input type="radio" name="q10" value="C" onclick="giveFeedback(10, 'C')"> ค) 1500 m/s</label>
+            <label><input type="radio" name="q10" value="D" onclick="giveFeedback(10, 'D')"> ง) 5000 m/s</label>
+        </div>
+        <p id="feedback10"></p>
+    </div>
+    
+    <div class="question">
+        <p><b>11. การได้ยินเสียงเอคโค่เกิดจากอะไร?</b></p>
+        <div class="options">
+            <label><input type="radio" name="q11" value="A" onclick="giveFeedback(11, 'A')"> ก) การดูดซับเสียง</label>
+            <label><input type="radio" name="q11" value="B" onclick="giveFeedback(11, 'B')"> ข) การสะท้อนของเสียง</label>
+            <label><input type="radio" name="q11" value="C" onclick="giveFeedback(11, 'C')"> ค) การหักเหเสียง</label>
+            <label><input type="radio" name="q11" value="D" onclick="giveFeedback(11, 'D')"> ง) การแทรกสอดของเสียง</label>
+        </div>
+        <p id="feedback11"></p>
+    </div>
+    
+    <div class="question">
+        <p><b>12. อวัยวะส่วนใดทำหน้าที่รักษาสมดุลความดันอากาศในหู?</b></p>
+        <div class="options">
+            <label><input type="radio" name="q12" value="A" onclick="giveFeedback(12, 'A')"> ก) กลองหู</label>
+            <label><input type="radio" name="q12" value="B" onclick="giveFeedback(12, 'B')"> ข) ท่อยูสเตเชียน</label>
+            <label><input type="radio" name="q12" value="C" onclick="giveFeedback(12, 'C')"> ค) โคเคลีย</label>
+            <label><input type="radio" name="q12" value="D" onclick="giveFeedback(12, 'D')"> ง) ค้อน</label>
+        </div>
+        <p id="feedback12"></p>
+    </div>
+    
+    <div class="question">
+        <p><b>13. เสียงดังเกินกี่เดซิเบลที่อาจเป็นอันตรายต่อหู?</b></p>
+        <div class="options">
+            <label><input type="radio" name="q13" value="A" onclick="giveFeedback(13, 'A')"> ก) 50 dB</label>
+            <label><input type="radio" name="q13" value="B" onclick="giveFeedback(13, 'B')"> ข) 85 dB</label>
+            <label><input type="radio" name="q13" value="C" onclick="giveFeedback(13, 'C')"> ค) 30 dB</label>
+            <label><input type="radio" name="q13" value="D" onclick="giveFeedback(13, 'D')"> ง) 10 dB</label>
+        </div>
+        <p id="feedback13"></p>
+    </div>
+    
+    <div class="question">
+        <p><b>14. ตัวกลางใดส่งเสียงได้ดีที่สุด?</b></p>
+        <div class="options">
+            <label><input type="radio" name="q14" value="A" onclick="giveFeedback(14, 'A')"> ก) อากาศ</label>
+            <label><input type="radio" name="q14" value="B" onclick="giveFeedback(14, 'B')"> ข) น้ำ</label>
+            <label><input type="radio" name="q14" value="C" onclick="giveFeedback(14, 'C')"> ค) โลหะ</label>
+            <label><input type="radio" name="q14" value="D" onclick="giveFeedback(14, 'D')"> ง) สุญญากาศ</label>
+        </div>
+        <p id="feedback14"></p>
+    </div>
+    
+    <div class="question">
+        <p><b>15. เสียงทุ้มมีความถี่อย่างไรเมื่อเทียบกับเสียงแหลม?</b></p>
+        <div class="options">
+            <label><input type="radio" name="q15" value="A" onclick="giveFeedback(15, 'A')"> ก) สูงกว่า</label>
+            <label><input type="radio" name="q15" value="B" onclick="giveFeedback(15, 'B')"> ข) ต่ำกว่า</label>
+            <label><input type="radio" name="q15" value="C" onclick="giveFeedback(15, 'C')"> ค) เท่ากัน</label>
+            <label><input type="radio" name="q15" value="D" onclick="giveFeedback(15, 'D')"> ง) ไม่เกี่ยวข้องกับความถี่</label>
+        </div>
+        <p id="feedback15"></p>
+    </div>
+    
+    <div class="question">
+        <p><b>16. การลดมลพิษทางเสียงทำได้อย่างไร?</b></p>
+        <div class="options">
+            <label><input type="radio" name="q16" value="A" onclick="giveFeedback(16, 'A')"> ก) เปิดเพลงเสียงดัง</label>
+            <label><input type="radio" name="q16" value="B" onclick="giveFeedback(16, 'B')"> ข) ติดฉนวนกันเสียง</label>
+            <label><input type="radio" name="q16" value="C" onclick="giveFeedback(16, 'C')"> ค) ตะโกนแข่งเสียง</label>
+            <label><input type="radio" name="q16" value="D" onclick="giveFeedback(16, 'D')"> ง) ใช้แตรดัง</label>
+        </div>
+        <p id="feedback16"></p>
+    </div>
+    
+    <div class="question">
+        <p><b>17. ในน้ำ เสียงเคลื่อนที่ได้อย่างไร?</b></p>
+        <div class="options">
+            <label><input type="radio" name="q17" value="A" onclick="giveFeedback(17, 'A')"> ก) เร็วกว่าในอากาศ</label>
+            <label><input type="radio" name="q17" value="B" onclick="giveFeedback(17, 'B')"> ข) ช้ากว่าในอากาศ</label>
+            <label><input type="radio" name="q17" value="C" onclick="giveFeedback(17, 'C')"> ค) เท่ากับในอากาศ</label>
+            <label><input type="radio" name="q17" value="D" onclick="giveFeedback(17, 'D')"> ง) ไม่สามารถเคลื่อนที่ได้</label>
+        </div>
+        <p id="feedback17"></p>
+    </div>
+    
+    <div class="question">
+        <p><b>18. เสียงประเภทใดที่มนุษย์ไม่ได้ยิน?</b></p>
+        <div class="options">
+            <label><input type="radio" name="q18" value="A" onclick="giveFeedback(18, 'A')"> ก) เสียงอัลตราโซนิก</label>
+            <label><input type="radio" name="q18" value="B" onclick="giveFeedback(18, 'B')"> ข) เสียงพูด</label>
+            <label><input type="radio" name="q18" value="C" onclick="giveFeedback(18, 'C')"> ค) เสียงดนตรี</label>
+            <label><input type="radio" name="q18" value="D" onclick="giveFeedback(18, 'D')"> ง) เสียงปรบมือ</label>
+        </div>
+        <p id="feedback18"></p>
+    </div>
+    
+    <div class="question">
+        <p><b>19. การสั่นของสายกีตาร์ทำให้เกิดเสียงเพราะอะไร?</b></p>
+        <div class="options">
+            <label><input type="radio" name="q19" value="A" onclick="giveFeedback(19, 'A')"> ก) การเคลื่อนที่ของลม</label>
+            <label><input type="radio" name="q19" value="B" onclick="giveFeedback(19, 'B')"> ข) การสั่นสะเทือน</label>
+            <label><input type="radio" name="q19" value="C" onclick="giveFeedback(19, 'C')"> ค) การหมุนของสาย</label>
+            <label><input type="radio" name="q19" value="D" onclick="giveFeedback(19, 'D')"> ง) การส่องแสง</label>
+        </div>
+        <p id="feedback19"></p>
+    </div>
+    
+    <div class="question">
+        <p><b>20. หูชั้นในประกอบด้วยอะไร?</b></p>
+        <div class="options">
+            <label><input type="radio" name="q20" value="A" onclick="giveFeedback(20, 'A')"> ก) ค้อน-ทั่ง-โกลน</label>
+            <label><input type="radio" name="q20" value="B" onclick="giveFeedback(20, 'B')"> ข) โคเคลีย</label>
+            <label><input type="radio" name="q20" value="C" onclick="giveFeedback(20, 'C')"> ค) กลองหู</label>
+            <label><input type="radio" name="q20" value="D" onclick="giveFeedback(20, 'D')"> ง) ท่อยูสเตเชียน</label>
+        </div>
+        <p id="feedback20"></p>
+    </div>
+    
+    <div class="question">
+        <p><b>21. เสียงจะได้ยินดังขึ้นหากแหล่งกำเนิดเสียงอยู่ที่ใด?</b></p>
+        <div class="options">
+            <label><input type="radio" name="q21" value="A" onclick="giveFeedback(21, 'A')"> ก) ใกล้ผู้ฟัง</label>
+            <label><input type="radio" name="q21" value="B" onclick="giveFeedback(21, 'B')"> ข) ไกลผู้ฟัง</label>
+            <label><input type="radio" name="q21" value="C" onclick="giveFeedback(21, 'C')"> ค) ใต้ดิน</label>
+            <label><input type="radio" name="q21" value="D" onclick="giveFeedback(21, 'D')"> ง) ในอวกาศ</label>
+        </div>
+        <p id="feedback21"></p>
+    </div>
+    
+    <div class="question">
+        <p><b>22. มลพิษทางเสียงส่งผลต่ออะไรบ้าง?</b></p>
+        <div class="options">
+            <label><input type="radio" name="q22" value="A" onclick="giveFeedback(22, 'A')"> ก) การนอนหลับ</label>
+            <label><input type="radio" name="q22" value="B" onclick="giveFeedback(22, 'B')"> ข) ความดันโลหิต</label>
+            <label><input type="radio" name="q22" value="C" onclick="giveFeedback(22, 'C')"> ค) การได้ยิน</label>
+            <label><input type="radio" name="q22" value="D" onclick="giveFeedback(22, 'D')"> ง) ถูกทุกข้อ</label>
+        </div>
+        <p id="feedback22"></p>
+    </div>
+    
+    <div class="question">
+        <p><b>23. เสียงในสุญญากาศจะเป็นอย่างไร?</b></p>
+        <div class="options">
+            <label><input type="radio" name="q23" value="A" onclick="giveFeedback(23, 'A')"> ก) เดินทางได้เร็วมาก</label>
+            <label><input type="radio" name="q23" value="B" onclick="giveFeedback(23, 'B')"> ข) ไม่สามารถเดินทางได้</label>
+            <label><input type="radio" name="q23" value="C" onclick="giveFeedback(23, 'C')"> ค) ดังขึ้น</label>
+            <label><input type="radio" name="q23" value="D" onclick="giveFeedback(23, 'D')"> ง) เบาลง</label>
+        </div>
+        <p id="feedback23"></p>
+    </div>
+    
+    <div class="question">
+        <p><b>24. เสียงที่มีความเข้มต่ำเรียกว่าอะไร?</b></p>
+        <div class="options">
+            <label><input type="radio" name="q24" value="A" onclick="giveFeedback(24, 'A')"> ก) เสียงดัง</label>
+            <label><input type="radio" name="q24" value="B" onclick="giveFeedback(24, 'B')"> ข) เสียงเบา</label>
+            <label><input type="radio" name="q24" value="C" onclick="giveFeedback(24, 'C')"> ค) เสียงก้อง</label>
+            <label><input type="radio" name="q24" value="D" onclick="giveFeedback(24, 'D')"> ง) เสียงสะท้อน</label>
+        </div>
+        <p id="feedback24"></p>
+    </div>
+    
+    <div class="question">
+        <p><b>25. การใช้ผนังกันเสียงในอาคารช่วยลดอะไร?</b></p>
+        <div class="options">
+            <label><input type="radio" name="q25" value="A" onclick="giveFeedback(25, 'A')"> ก) ความสว่าง</label>
+            <label><input type="radio" name="q25" value="B" onclick="giveFeedback(25, 'B')"> ข) อุณหภูมิ</label>
+            <label><input type="radio" name="q25" value="C" onclick="giveFeedback(25, 'C')"> ค) มลพิษทางเสียง</label>
+            <label><input type="radio" name="q25" value="D" onclick="giveFeedback(25, 'D')"> ง) ความชื้น</label>
+        </div>
+        <p id="feedback25"></p>
+    </div>
+    
+    <div class="question">
+        <p><b>26. ระดับเสียงที่ดังมากอาจทำให้เกิดผลเสียต่ออะไร?</b></p>
+        <div class="options">
+            <label><input type="radio" name="q26" value="A" onclick="giveFeedback(26, 'A')"> ก) ดวงตา</label>
+            <label><input type="radio" name="q26" value="B" onclick="giveFeedback(26, 'B')"> ข) หู</label>
+            <label><input type="radio" name="q26" value="C" onclick="giveFeedback(26, 'C')"> ค) ผิวหนัง</label>
+            <label><input type="radio" name="q26" value="D" onclick="giveFeedback(26, 'D')"> ง) กระดูก</label>
+        </div>
+        <p id="feedback26"></p>
+    </div>
+    
+    <div class="question">
+        <p><b>27. เสียงใดที่ถือว่าเป็นเสียงรบกวน?</b></p>
+        <div class="options">
+            <label><input type="radio" name="q27" value="A" onclick="giveFeedback(27, 'A')"> ก) เสียงเพลงเบาๆ</label>
+            <label><input type="radio" name="q27" value="B" onclick="giveFeedback(27, 'B')"> ข) เสียงสว่านตอนกลางคืน</label>
+            <label><input type="radio" name="q27" value="C" onclick="giveFeedback(27, 'C')"> ค) เสียงฝนตก</label>
+            <label><input type="radio" name="q27" value="D" onclick="giveFeedback(27, 'D')"> ง) เสียงใบไม้ร่วง</label>
+        </div>
+        <p id="feedback27"></p>
+    </div>
+    
+    <div class="question">
+        <p><b>28. การใช้หูฟังนาน ๆ อาจส่งผลอย่างไร?</b></p>
+        <div class="options">
+            <label><input type="radio" name="q28" value="A" onclick="giveFeedback(28, 'A')"> ก) ทำให้หูไวต่อเสียง</label>
+            <label><input type="radio" name="q28" value="B" onclick="giveFeedback(28, 'B')"> ข) เสี่ยงต่อการสูญเสียการได้ยิน</label>
+            <label><input type="radio" name="q28" value="C" onclick="giveFeedback(28, 'C')"> ค) ช่วยป้องกันเสียงรบกวน</label>
+            <label><input type="radio" name="q28" value="D" onclick="giveFeedback(28, 'D')"> ง) ทำให้ฟังชัดขึ้น</label>
+        </div>
+        <p id="feedback28"></p>
+    </div>
+    
+    <div class="question">
+        <p><b>29. เสียงที่มีความถี่ต่ำกว่า 20 Hz เรียกว่าอะไร?</b></p>
+        <div class="options">
+            <label><input type="radio" name="q29" value="A" onclick="giveFeedback(29, 'A')"> ก) Ultrasound</label>
+            <label><input type="radio" name="q29" value="B" onclick="giveFeedback(29, 'B')"> ข) Infrasound</label>
+            <label><input type="radio" name="q29" value="C" onclick="giveFeedback(29, 'C')"> ค) Loud Sound</label>
+            <label><input type="radio" name="q29" value="D" onclick="giveFeedback(29, 'D')"> ง) Normal Sound</label>
+        </div>
+        <p id="feedback29"></p>
+    </div>
+    
+    <div class="question">
+        <p><b>30. ส่วนใดของหูทำหน้าที่ขยายคลื่นเสียงไปยังหูชั้นใน?</b></p>
+        <div class="options">
+            <label><input type="radio" name="q30" value="A" onclick="giveFeedback(30, 'A')"> ก) ค้อน-ทั่ง-โกลน</label>
+            <label><input type="radio" name="q30" value="B" onclick="giveFeedback(30, 'B')"> ข) กลองหู</label>
+            <label><input type="radio" name="q30" value="C" onclick="giveFeedback(30, 'C')"> ค) โคเคลีย</label>
+            <label><input type="radio" name="q30" value="D" onclick="giveFeedback(30, 'D')"> ง) ท่อยูสเตเชียน</label>
+        </div>
+        <p id="feedback30"></p>
+    </div>
+    
+        <button type="button" onclick="showResult()">✅ สรุปคะแนน</button>
+    </form>
+
+    <div id="result">
+        <h2>🎉 สรุปคะแนน 🎉</h2>
+        <p class="logo">🌟 Kru Pai Classroom 🌟</p>
+        <p id="score" class="big-score"></p>
+        <p id="message" class="emoji"></p>
+        <button onclick="restartQuiz()">🔄 กลับหน้าแรก</button>
+    </div>
+
+    <script>
+        let totalScore = 0;
+
+        const answers = {
+            q1: 'A',
+            q2: 'C',
+            q3: 'B',
+            q4: 'C',
+            q5: 'B',
+            q6: 'B',
+            q7: 'B',
+            q8: 'D',
+            q9: 'A',
+            q10: 'B',
+            q11: 'B',
+            q12: 'B',
+            q13: 'B',
+            q14: 'C',
+            q15: 'B',
+            q16: 'B',
+            q17: 'A',
+            q18: 'A',
+            q19: 'B',
+            q20: 'B',
+            q21: 'A',
+            q22: 'D',
+            q23: 'B',
+            q24: 'B',
+            q25: 'C',
+            q26: 'B',
+            q27: 'B',
+            q28: 'B',
+            q29: 'B',
+            q30: 'A',
+
+        };
+
+        function giveFeedback(qNumber, selected) {
+            let radios = document.getElementsByName('q' + qNumber);
+            for (let radio of radios) {
+                radio.disabled = true;
+            }
+            let feedback = document.getElementById('feedback' + qNumber);
+            if (selected === answers['q' + qNumber]) {
+                feedback.innerHTML = "✅ <span class='correct'>ถูกต้อง</span>";
+                totalScore++;
+            } else {
+                feedback.innerHTML = "❌ <span class='wrong'>ผิด</span> (คำตอบที่ถูก: " + answers['q' + qNumber] + ")";
+            }
+        }
+
+        function showResult() {
+            document.getElementById('score').innerHTML = "คุณได้คะแนน " + totalScore + " / 30";
+            if (totalScore >= 25) {
+                document.getElementById('message').innerHTML = "🏆 เก่งมากเลย!";
+            } else if (totalScore >= 15) {
+                document.getElementById('message').innerHTML = "👍 ทำได้ดี!";
+            } else {
+                document.getElementById('message').innerHTML = "💪 สู้ๆ นะ!";
+            }
+        }
+
+        function restartQuiz() {
+            window.location.reload();
+        }
+    </script>
+</body>
+</html>
